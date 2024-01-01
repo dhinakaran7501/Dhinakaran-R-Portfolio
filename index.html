@@ -96,7 +96,7 @@
             </p>
           </div>
           <div class="role-sec">
-            <h1>And I'm a <span class="multiple-text"></span></h1>
+            <h1>And I'm a <span class="multiple-text">Frontend Developer</span></h1>
             <!-- <img src="./img/wave.png" alt="wave"> -->
           </div>
           <div class="role-explain">
@@ -558,7 +558,16 @@
 
 
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="/js/script.js"></script>
+  <script>
+    var typed = new Typed(".multiple-text", {
+      strings: ["Frontend Developer", "Web Developer"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1000,
+      loop: true,
+    });
+
+  </script>
 </body>
 
 </html>
