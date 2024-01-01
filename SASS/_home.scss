@@ -13,20 +13,71 @@
       width: 50%;
       
       .role-sec{
-        h1{
-          color: $white-color;
-          font-size: 39px;
-          font-weight: bold;
-          width: 70%;
-  
-          img{
-            width: 62px;
+        
+        .hello{
+          font-size: 25px;
+          font-weight: 300;
+          opacity: 0;
+          animation: slideBottom 1s ease forwards;
+        }
+
+        .name-sec{
+          display: flex;
+          align-items: center;
+          gap: 2%;
+          animation: slideLeft 1s ease forwards;
+
+          p{
+            font-weight: 600;
+            font-size: 34px;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            margin: 16px 0;
+        
+
+            .color{
+              color: $rose-color;
+            }
+
+            span:nth-child(11){
+              margin-left: 5px;
+            }
+
+            span{
+            opacity: 0;
+            animation: slideLeft 0.5s ease forwards;
+            animation-delay: calc(.1s * var(--i));  
+            }
+
           }
         }
-        p{
-          font-size: 20px;
+      
+        .role-sec{
           display: flex;
-          flex-wrap: wrap;
+          align-items: center;
+          gap: 5px;
+          animation: slideTop 1s ease forwards;
+          h1{
+            color: $white-color;
+            font-size: 26px;
+            font-weight: bold;
+            // width: 496px;
+            
+            span{
+              color: $primay-color;
+            }
+          }
+          
+          img{
+            width: 30px;
+          }
+        }
+
+        .role-explain{
+          margin: 30px 20px 10px 0;
+          text-align: justify;
+          font-size: 18px;
         }
       }
 
@@ -97,19 +148,26 @@
             font-size: 30px;
             width: 90%;
 
-            img{
-              width: 8%;
+            span:nth-child(1){
+              display: inline-block;
             }
           }
 
-          p{
-            margin: 10px 0;
+          img{
+            display: none;
+          }
+
+          .name-sec{
+            p{
+              font-size: 27px;
+            }
           }
         }
 
         .icon-sec{
           gap: 2%;
         }
+
       }
       
       .img-sec{
@@ -140,10 +198,10 @@
           h1{
             font-size: 2.5rem;
             width: 90%;
-
-            img{
-              width: 8%;
-            }
+          }
+          
+          img{
+            display: none;
           }
         }
       }

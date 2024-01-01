@@ -1,3 +1,4 @@
+@charset "UTF-8";
 p,
 h1,
 h2,
@@ -51,6 +52,46 @@ body {
     transform: rotate(1turn);
   }
 }
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 #Navbar {
   border-bottom: 1px solid #fff;
   border-top: 1px solid #fff;
@@ -67,21 +108,13 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-#Navbar .navbar-section .name-sec {
-  width: 20%;
-  display: flex;
-  align-items: center;
-  gap: 2%;
-}
-#Navbar .navbar-section .name-sec p {
-  font-weight: 700;
+#Navbar .navbar-section .portfolio {
   font-size: 20px;
-  letter-spacing: 0.3px;
-}
-#Navbar .navbar-section .name-sec p span {
-  color: #fd005b;
-  font-size: 25px;
-  margin-right: 1px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  width: 50%;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
 }
 #Navbar .navbar-section .list-sec {
   width: 44%;
@@ -97,6 +130,9 @@ body {
   display: block;
   width: 0%;
   transition: 0.5s;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 #Navbar .navbar-section .list-sec li a:hover {
   color: #ffc107;
@@ -110,11 +146,9 @@ body {
     width: 100%;
     flex-direction: column;
   }
-  #Navbar .navbar-section .name-sec {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  #Navbar .navbar-section .portfolio {
+    text-align: center;
+    color: #ffc107;
   }
   #Navbar .navbar-section .list-sec {
     width: 100%;
@@ -153,19 +187,58 @@ body {
 #Home .home-section .home-content-sec {
   width: 50%;
 }
-#Home .home-section .home-content-sec .role-sec h1 {
-  color: #fff;
-  font-size: 39px;
-  font-weight: bold;
-  width: 70%;
+#Home .home-section .home-content-sec .role-sec .hello {
+  font-size: 25px;
+  font-weight: 300;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
 }
-#Home .home-section .home-content-sec .role-sec h1 img {
-  width: 62px;
-}
-#Home .home-section .home-content-sec .role-sec p {
-  font-size: 20px;
+#Home .home-section .home-content-sec .role-sec .name-sec {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 2%;
+  animation: slideLeft 1s ease forwards;
+}
+#Home .home-section .home-content-sec .role-sec .name-sec p {
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+#Home .home-section .home-content-sec .role-sec .name-sec p .color {
+  color: #fd005b;
+}
+#Home .home-section .home-content-sec .role-sec .name-sec p span:nth-child(11) {
+  margin-left: 5px;
+}
+#Home .home-section .home-content-sec .role-sec .name-sec p span {
+  opacity: 0;
+  animation: slideLeft 0.5s ease forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+#Home .home-section .home-content-sec .role-sec .role-sec {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  animation: slideTop 1s ease forwards;
+}
+#Home .home-section .home-content-sec .role-sec .role-sec h1 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+}
+#Home .home-section .home-content-sec .role-sec .role-sec h1 span {
+  color: #0dcaf0;
+}
+#Home .home-section .home-content-sec .role-sec .role-sec img {
+  width: 30px;
+}
+#Home .home-section .home-content-sec .role-sec .role-explain {
+  margin: 30px 20px 10px 0;
+  text-align: justify;
+  font-size: 18px;
 }
 #Home .home-section .home-content-sec .icon-sec {
   margin: 15px 0;
@@ -218,11 +291,14 @@ body {
     font-size: 30px;
     width: 90%;
   }
-  #Home .home-section .home-content-sec .role-sec h1 img {
-    width: 8%;
+  #Home .home-section .home-content-sec .role-sec h1 span:nth-child(1) {
+    display: inline-block;
   }
-  #Home .home-section .home-content-sec .role-sec p {
-    margin: 10px 0;
+  #Home .home-section .home-content-sec .role-sec img {
+    display: none;
+  }
+  #Home .home-section .home-content-sec .role-sec .name-sec p {
+    font-size: 27px;
   }
   #Home .home-section .home-content-sec .icon-sec {
     gap: 2%;
@@ -248,8 +324,8 @@ body {
     font-size: 2.5rem;
     width: 90%;
   }
-  #Home .home-section .home-content-sec .role-sec h1 img {
-    width: 8%;
+  #Home .home-section .home-content-sec .role-sec img {
+    display: none;
   }
   #Home .home-section .img-sec {
     animation: none;
@@ -763,43 +839,53 @@ body {
   transition: 0.5s;
 }
 #Projects .projects-section .react-projects {
-  width: 78%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 #Projects .projects-section .react-projects li {
   margin-top: 10px;
   border: 1px solid #fff;
-  width: 24%;
-  padding: 20px;
-  height: 380px;
+  width: 310px;
+  padding: 15px;
   border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 #Projects .projects-section .react-projects li .img-sec {
   border: 1px solid;
   border-radius: 30px;
   overflow: hidden;
+  width: 276px;
   height: 250px;
+  background-color: #fff;
+  cursor: pointer;
 }
 #Projects .projects-section .react-projects li .img-sec img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#Projects .projects-section .react-projects li h2 {
-  margin: 15px 0;
-  font-size: 20px;
-  color: #ffc107;
-  text-align: center;
+#Projects .projects-section .react-projects li div {
+  width: 276px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-#Projects .projects-section .react-projects li .link-sec {
+#Projects .projects-section .react-projects li div .link-sec {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 30px;
 }
-#Projects .projects-section .react-projects li .link-sec a {
+#Projects .projects-section .react-projects li div .link-sec a {
   border: 1px solid #fff;
   width: 120px;
   height: 34px;
@@ -807,6 +893,38 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 14px;
+}
+#Projects .projects-section .react-projects li div .projectheading {
+  width: 100%;
+  height: 56px;
+  margin: 15px 0 0;
+  font-size: 20px;
+  color: #ffc107;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Projects .projects-section .react-projects li div ul {
+  width: 100%;
+  height: 136px;
+}
+#Projects .projects-section .react-projects li div ul p {
+  color: #fd005b;
+  margin-top: 5px;
+}
+#Projects .projects-section .react-projects li div ul li {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: initial;
+  margin-top: 10px;
+  border: none;
+  padding: 0;
+}
+#Projects .projects-section .react-projects li div ul li::before {
+  content: "➟";
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
@@ -853,6 +971,9 @@ body {
   #Projects .projects-section .jsprojects li {
     width: 278px;
   }
+  #Projects .projects-section .react-projects li:nth-child(2) {
+    display: none;
+  }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   #Projects .projects-section .static-projects li {
@@ -881,27 +1002,7 @@ body {
   #Projects .projects-section .jsprojects li {
     width: 268px;
   }
-}
-@media (min-width: 1200px) and (max-width: 1400px) {
-  #Projects .projects-section .static-projects li {
-    display: flex;
-    justify-content: space-between;
-    width: 49%;
-    height: 100%;
-    flex-direction: column;
-  }
-  #Projects .projects-section .static-projects li .img-sec {
-    width: 100%;
-  }
-  #Projects .projects-section .static-projects li .img-sec img {
-    transform: none !important;
-    transition: none !important;
-  }
-  #Projects .projects-section .static-projects li .content-sec {
-    width: 100%;
-    height: 100%;
-  }
-  #Projects .projects-section .static-projects li .content-sec .tech {
+  #Projects .projects-section .react-projects li:nth-child(2) {
     display: none;
   }
 }
@@ -1029,5 +1130,65 @@ body {
   #Contact .contact-sec .email-sec {
     margin-top: 15px;
     width: 280px;
+  }
+}
+#Copyright {
+  border-bottom: 1px solid #fff;
+  padding: 20px;
+}
+#Copyright .copyright-section {
+  width: 78%;
+  margin: 0 auto;
+}
+#Copyright .copyright-section ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#Copyright .copyright-section ul li:nth-child(1) {
+  color: #999999;
+  font-size: 16px;
+}
+#Copyright .copyright-section ul li:nth-child(1) span {
+  color: #fd005b;
+}
+#Copyright .copyright-section ul li:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 133px;
+}
+#Copyright .copyright-section ul li:nth-child(2) a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50px;
+  border: 1px solid #393939;
+  transition: all 0.5s;
+  font-size: 20px;
+}
+#Copyright .copyright-section ul li:nth-child(2) a:hover {
+  background-color: #fd005b;
+  transform: 0.5s;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  #Copyright {
+    padding: 10px 0;
+  }
+  #Copyright .copyright-section {
+    width: 98%;
+    margin: 10px 0;
+  }
+  #Copyright .copyright-section ul li:nth-child(1) {
+    font-size: 14.5px;
+    white-space: nowrap;
+  }
+  #Copyright .copyright-section ul li:nth-child(2) {
+    margin: 10px 0 0;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -33,35 +33,35 @@
 <body>
 
   <!-- Navbar Section Starts -->
-  <section id="Navbar">
+  <nav id="Navbar">
     <div class="navbar-section">
 
-      <div class="name-sec">
-        <p><span>D</span>hinakaran</p>
-        <p><span>R</span>amasamy</p>
+
+      <div class="portfolio">
+        <a href="#Home">portfolio.</a>
       </div>
 
       <ul class="list-sec">
         <li>
-          <a href="#">Home</a>
+          <a href="#Home" style="--i:1;">Home</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="#Aboutme" style="--i:2;">About</a>
         </li>
         <li>
-          <a href="#">Skills</a>
+          <a href="#Education" style="--i:3;">Education</a>
         </li>
         <li>
-          <a href="#">Education</a>
+          <a href="#Skills" style="--i:4;">Skills</a>
         </li>
         <li>
-          <a href="#">Projects</a>
+          <a href="#Projects" style="--i:5;">Projects</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="#Contact" style="--i:6;">Contact</a>
         </li>
       </ul>
-    </div>
+  </nav>
 
   </section>
   <!-- Navbar Section Ends -->
@@ -71,19 +71,49 @@
     <div class="home-section">
       <div class="home-content-sec">
         <div class="role-sec">
-          <h1>Front-End React Developer <img src="./img/wave.png" alt="wave"></h1>
-          <p>Hi, I'm Dhinakaran R a passionate Front-end React Developer.</p>
+          <p class="hello">Hello, It's Me</p>
+          <div class="name-sec">
+            <p>
+              <span style="--i:1;" class="color">D</span>
+              <span style="--i:2;">h</span>
+              <span style="--i:3;">i</span>
+              <span style="--i:4;">n</span>
+              <span style="--i:5;">a</span>
+              <span style="--i:6;">k</span>
+              <span style="--i:7;">a</span>
+              <span style="--i:8;">r</span>
+              <span style="--i:9;">a</span>
+              <span style="--i:10;">n</span>
+              <span style="--i:11;" class="color">R</span>
+              <span style="--i:12;">a</span>
+              <span style="--i:13;">m</span>
+              <span style="--i:14;">a</span>
+              <span style="--i:15;">s</span>
+              <span style="--i:16;">a</span>
+              <span style="--i:17;">m</span>
+              <span style="--i:18;">y</span>
+
+            </p>
+          </div>
+          <div class="role-sec">
+            <h1>And I'm a <span class="multiple-text"></span></h1>
+            <!-- <img src="./img/wave.png" alt="wave"> -->
+          </div>
+          <div class="role-explain">
+            <p>Passionate frontend developer, eager to bring creative designs to life through clean
+              and responsive code. Committed to continuous learning and delivering engaging user experiences.</p>
+          </div>
         </div>
         <div class="icon-sec">
-          <a href="#">
+          <a href="https://www.linkedin.com/in/dhinakaran-ramasamy-7684ba22a/" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a href="#">
+          <a href="https://github.com/dhinakaran7501?tab=repositories" target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
           <a href="#">
-            <button type="button" class="btn btn-outline-warning">Download My Resume <i
-                class="bi bi-cloud-arrow-down-fill"></i></button>
+            <a type="button" href="./document/Dhinakaran Resume.pdf" download class="btn btn-outline-warning">Download
+              My Resume <i class="bi bi-cloud-arrow-down-fill"></i></a>
           </a>
 
         </div>
@@ -195,7 +225,7 @@
 
   <!-- Education Section Starts -->
   <section id="Projects">
-    <h2 class="heading"><i class="bi bi-pc-display-horizontal"></i>Projects</h2>
+    <h2 class="heading"><i class="bi bi-pc-display-horizontal"></i>My Projects</h2>
     <p class="project-description">I've created a few projects using HTML, CSS, SASS, BOOTSTRAP, JavaScript & Reactjs
       that are copies of popular
       websites like Book My Show, Swiggy, Boxfin, Netflix, Restaurant Web Pages, SmartCode Web Pages,
@@ -206,64 +236,10 @@
       <p class="title">HTML5, CSS3, Bootstrap 5, SASS Projects :</p>
       <ul class="static-projects">
 
-        <!-- <li>
-          <a href="#" class="img-sec">
-            <img src="./img/bookmyshow.jpg" alt="Bookmyshow">
-          </a>
-          <div class="content-sec">
-            <h3 class="title">Book My Show</h3>
-            <p class=" content"> I created a Book My Show website in static mode utilizing by HTML, CSS, and a
-              mobile-responsive design.
-            </p>
-            <div class="tech">
-              <div class="tech-used">HTML5</div>
-              <div class="tech-used">CSS3</div>
-            </div>
-            <div class="code-img">
-              <div class="tech-code">
-                <a href="https://github.com/dhinakaran7501/Task-26---Book-My-Show-40" target="_blank">Code
-                  <i class="bi bi-github"></i></a>
-              </div>
-              <div class="tech-code">
-                <a href="https://dhinakaran7501.github.io/Task-26---Book-My-Show-40/" target="_blank">Live
-                  Demo <i class="bi bi-box-arrow-up-right"></i></a>
-              </div>
-            </div>
-
-          </div>
-        </li> -->
-
-        <!-- <li>
-          <a href="#" class="img-sec">
-            <img src="./img/Netflix.jpg" alt="Netflix">
-          </a>
-          <div class="content-sec">
-            <h3 class="title">Netflix</h3>
-            <p class=" content"> I created a Book My Show website in static mode utilizing by HTML, CSS without
-              responsive design.
-            </p>
-            <div class="tech">
-              <div class="tech-used">HTML5</div>
-              <div class="tech-used">CSS3</div>
-            </div>
-            <div class="code-img">
-              <div class="tech-code">
-                <a href="https://github.com/dhinakaran7501/Task--25--Netflix-" target="_blank">Code
-                  <i class="bi bi-github"></i></a>
-              </div>
-              <div class="tech-code">
-                <a href="https://dhinakaran7501.github.io/Task--25--Netflix-/" target="_blank">Live
-                  Demo <i class="bi bi-box-arrow-up-right"></i></a>
-              </div>
-            </div>
-
-          </div>
-        </li> -->
-
         <li>
-          <a href="#" class="img-sec">
+          <div class="img-sec">
             <img src="./img/boxfin.jpg" alt="Boxfin">
-          </a>
+          </div>
           <div class="content-sec">
             <h3 class="title">Boxfin</h3>
             <p class=" content"> I created a Boxfin website in static mode by utilizing HTML, CSS with fully responsive.
@@ -286,38 +262,11 @@
           </div>
         </li>
 
-        <!-- <li>
-          <a href="#" class="img-sec">
-            <img src="./img/restaurant.jpg" alt="Restaurant">
-          </a>
-          <div class="content-sec">
-            <h3 class="title">Restaurant Website</h3>
-            <p class=" content"> I created a Restaurant website in static mode by utilizing HTML, CSS and Bootstrap with
-              fully responsive.
-            </p>
-            <div class="tech">
-              <div class="tech-used">HTML5</div>
-              <div class="tech-used">Bootstrap5</div>
-            </div>
-            <div class="code-img">
-              <div class="tech-code">
-                <a href="https://github.com/dhinakaran7501/Task-31-Restaurants-Bootstrap-Responsive"
-                  target="_blank">Code
-                  <i class="bi bi-github"></i></a>
-              </div>
-              <div class="tech-code">
-                <a href="https://dhinakaran7501.github.io/Task-31-Restaurants-Bootstrap-Responsive/"
-                  target="_blank">Live
-                  Demo <i class="bi bi-box-arrow-up-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </li> -->
 
         <li>
-          <a href="#" class="img-sec">
+          <div class="img-sec">
             <img src="./img/business.jpg" alt="Business">
-          </a>
+          </div>
           <div class="content-sec">
             <h3 class="title">Business Website</h3>
             <p class=" content">I created a Business website in static mode by utilizing HTML, CSS, Bootstrap and SASS
@@ -341,9 +290,9 @@
         </li>
 
         <li>
-          <a href="#" class="img-sec">
+          <div class="img-sec">
             <img src="./img/smartcode.jpg" alt="Smartcode">
-          </a>
+          </div>
           <div class="content-sec">
             <h3 class="title">Smartcode Website</h3>
             <p class=" content">I created a Smartcode website in static mode by utilizing HTML, CSS, Bootstrap and SASS
@@ -480,15 +429,24 @@
 
       <p class="title">Reactjs Projects :</p>
 
-      <ul class="react-projects" style="display: none;">
+      <ul class="react-projects">
         <li>
           <div class="img-sec">
             <img src="./img//reactjs/flipkart.jpg" alt="Flipkart">
           </div>
-          <h2>Flipkart Clone website</h2>
-          <div class="link-sec">
-            <a href="" target="_blank">Github</a>
-            <a href="" target="_blank">Live Demo</a>
+          <div>
+            <h2 class="projectheading" style="text-align: center;">Flipkart Clone Website <br /> [ Main Project ]</h2>
+            <ul>
+              <p>Used Methods:</p>
+              <li>HTML5, CSS3, SASS, Material-ui</li>
+              <li>Router,</li>
+              <li> Redux,</li>
+              <li> Local Storage.</li>
+            </ul>
+            <div class="link-sec">
+              <a href="https://github.com/dhinakaran7501/react-flipkart-clone-website" target="_blank">Github</a>
+              <a href="https://exquisite-caramel-3efa94.netlify.app/" target="_blank">Live Demo</a>
+            </div>
           </div>
         </li>
 
@@ -496,10 +454,18 @@
           <div class="img-sec">
             <img src="./img//reactjs/faraway.png" alt="Flipkart">
           </div>
-          <h2>Flipkart Clone website</h2>
-          <div class="link-sec">
-            <a href="" target="_blank">Github</a>
-            <a href="" target="_blank">Live Demo</a>
+          <div>
+            <h2 class="projectheading">Itinerary App</h2>
+            <ul>
+              <p>Used Methods:</p>
+              <li>HTML5, CSS3,</li>
+              <li>Javascript Array Methods,</li>
+              <li>Props,</li>
+              <li>Lifting Up State.</li>
+            </ul>
+            <div class="link-sec">
+              <a href="https://github.com/dhinakaran7501/react-Itinerary-app" target="_blank">Github</a>
+            </div>
           </div>
         </li>
 
@@ -507,10 +473,18 @@
           <div class="img-sec">
             <img src="./img//reactjs/eatsplit.png" alt="Flipkart">
           </div>
-          <h2>Flipkart Clone website</h2>
-          <div class="link-sec">
-            <a href="" target="_blank">Github</a>
-            <a href="" target="_blank">Live Demo</a>
+          <div>
+            <h2 class="projectheading">Eat and Split App</h2>
+            <ul>
+              <p>Used Methods:</p>
+              <li>HTML5, CSS3,</li>
+              <li>Javascript Array Methods,</li>
+              <li>Props, State,</li>
+              <li>Lifting Up State.</li>
+            </ul>
+            <div class="link-sec">
+              <a href="https://github.com/dhinakaran7501/react-eat-and-split-up" target="_blank">Github</a>
+            </div>
           </div>
         </li>
 
@@ -518,10 +492,18 @@
           <div class="img-sec">
             <img src="./img//reactjs/worldwise.png" alt="Flipkart">
           </div>
-          <h2>Flipkart Clone website</h2>
-          <div class="link-sec">
-            <a href="" target="_blank">Github</a>
-            <a href="" target="_blank">Live Demo</a>
+          <div>
+            <h2 class="projectheading">Worldwise App</h2>
+            <ul>
+              <p>Used Methods:</p>
+              <li>HTML5, CSS3, SASS, Material-ui</li>
+              <li>State, Props,</li>
+              <li>Router,</li>
+              <li>Context.</li>
+            </ul>
+            <div class="link-sec">
+              <a href="https://github.com/dhinakaran7501/react-worldwise-router" target="_blank">Github</a>
+            </div>
           </div>
         </li>
       </ul>
@@ -556,6 +538,27 @@
     </div>
   </section>
   <!-- Contact Education Ends -->
+
+  <!-- Copyright Section Starts -->
+  <section id="Copyright">
+    <div class="copyright-section">
+      <ul>
+        <li>© 2023 Copyright Its Me Design by <span>Dhinakaran</span>.</li>
+        <li>
+          <a href="https://www.linkedin.com/in/dhinakaran-ramasamy-7684ba22a/" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/dhinakaran7501?tab=repositories" target="_blank"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="mailto:dhinakings123@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- Copyright Section Ends -->
+
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>

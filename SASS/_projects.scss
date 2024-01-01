@@ -21,8 +21,6 @@
   }
 
   .projects-section{
-    // width: 78%;
-    // margin: 0 auto;
 
     .title{
       text-align: center;
@@ -322,25 +320,32 @@
     }
 
     .react-projects{
-      width: 78%;
-      margin:  0 auto;
+      width: 90%;
+      margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 15px;
 
       li{
         margin-top: 10px;
-        border: 1px solid $white-color;
-        width: 24%;
-        padding: 20px;
-        height: 380px;
+        border: 1px solid #fff;
+        width: 310px;
+        padding: 15px;
         border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
 
         .img-sec{
           border: 1px solid;
           border-radius: 30px;
           overflow: hidden;
+          width: 276px;
           height: 250px;
+          background-color: $white-color;
+          cursor: pointer;
 
           img{
             width: 100%;
@@ -348,26 +353,65 @@
             object-fit: cover;
           }
         }
-        h2{
-          margin: 15px 0;
-          font-size: 20px;
-          color: $warning-color;
-          text-align: center;
-        }
-
-        .link-sec{
+        
+        div{
+          width: 276px;
           display: flex;
-          align-items: center;
-          justify-content: space-evenly;
+          flex-direction: column;
+          justify-content: space-between;
 
-          a{
-            border: 1px solid $white-color;
-            width: 120px;
-            height: 34px;
+          .link-sec{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: row;
+            margin-top: 30px;
+            a{
+              border: 1px solid $white-color;
+              width: 120px;
+              height: 34px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 14px;
+            }
+          }
+
+          .projectheading{
+            width: 100%;
+            height: 56px;
+            margin: 15px 0 0;
+            font-size: 20px;
+            color: $warning-color;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 14px;
+          }
+          ul{
+            width: 100%;
+            height: 136px;
+
+            p{
+              color: $rose-color;
+              margin-top: 5px;
+            }
+
+            li{
+              width: 100%;
+              height: 20px;
+              display: flex;
+              align-items: flex-start;
+              justify-content: flex-start;
+              flex-direction: initial;
+              margin-top: 10px;
+              border: none;
+              padding: 0;
+
+            }
+            li::before{
+              content: "➟";
+            }
           }
         }
       }
@@ -435,6 +479,12 @@
           width: 278px;
         }
       }
+
+      .react-projects{
+        li:nth-child(2){
+          display: none;
+        }
+      }
     }
   }
 }
@@ -478,40 +528,10 @@
           width: 268px;
         }
       }
-    }
-  }
-}
-
-@media (min-width: 1200px) and (max-width: 1400px) {
-  #Projects{
-
-    .projects-section{
-
-      .static-projects{
-        li{
-          display: flex;
-          justify-content: space-between;
-          width: 49%;
-          height: 100%;
-          flex-direction: column;
-
-          .img-sec{
-            width: 100%;
-
-            img{
-              transform: none !important;
-              transition: none !important;
-            }
-          }
-
-          .content-sec{
-            width: 100%;
-            height: 100%;
-
-            .tech{
-              display: none;
-            }
-          }
+      
+      .react-projects{
+        li:nth-child(2){
+          display: none;
         }
       }
     }

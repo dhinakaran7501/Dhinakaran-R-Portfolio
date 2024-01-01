@@ -14,25 +14,15 @@
     align-items: center;
     justify-content: space-between;
 
-    .name-sec{
-      width: 20%;
-      display: flex;
-      align-items: center;
-      gap: 2%;
-
-      p{
-        font-weight: 700;
-        font-size: 20px;
-        letter-spacing: 0.3px;
-
-        span{
-          color: $rose-color;
-          font-size: 25px;
-          margin-right: 1px;
-        }
-
-      }
+    .portfolio{
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      width: 50%;
+      opacity: 0;
+      animation: slideRight 1s ease forwards;
     }
+
 
     .list-sec{
       width: 44%;
@@ -49,6 +39,10 @@
           display: block;
           width: 0%;
           transition: 0.5s;
+          opacity: 0;
+          animation: slideTop 0.5s ease forwards;
+          animation-delay: calc(.2s * var(--i));
+          // display: inline-block;
         
           &:hover{
             color: $warning-color;
@@ -60,6 +54,7 @@
         
       }
     }
+
   }
 }
 
@@ -69,13 +64,11 @@
 
     .navbar-section{
       width: 100%;
-
       flex-direction: column;
-      .name-sec{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+      .portfolio{
+        text-align: center;
+        color: $warning-color;
       }
 
       .list-sec{
@@ -102,6 +95,7 @@
 
     .navbar-section{
       width: 90%;
+
 
       .list-sec{
         width: 53%;
